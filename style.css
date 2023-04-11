@@ -1,3 +1,6 @@
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +28,12 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+/* Fonts */
+
+h1 {
+    font-family: 'Righteous', cursive;
 }
 
 .game-quiz-container {
