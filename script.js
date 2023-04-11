@@ -308,3 +308,81 @@ function checkForAnswer() {
         }
     })
 }
+
+// function for when next question is called
+
+function handleNextQuestion() {
+    checkForAnswer() // checking if player picked the  right or wrong answer
+    unCheckRadioButtons() // delay next question for a second to not rush the player
+    setTimeout(() => {
+        if (indexNumber <= 9 ) { //dispaly question as long as indext isnt greater than 9 ( which is 10)
+            NextQuestion(indexNumber)
+        }
+        else {
+            handleEndGame() // game end if index > 9 
+        }
+        resetOptionBackground()
+    }, 1000);
+}
+
+//  function that sets background back to null after displaying right or wrong answer
+function resetOptionBackground() {
+    const options = document.getElementsByName('option');
+    options.forEach((option) => {
+        document.getElementById(option.labels[0].id).style.backgroundColor = ""
+    })
+}
+
+// function that uncheck all radio buttons for next question
+function unCheckRadioButtons() {
+    const options = document.getElementsByName('option');
+    for (let i = 0; i < options.length; i++) {
+        options[i].checked = false;
+    }
+}
+
+// function for when all questions being answer..
+function handleEndGame() {
+    let remark = null
+    let remarkColor = null
+
+    // condition for check players remark and remarks color
+    if ( playerScore <= 3) {
+        remark = "Bad Gamer - You Should Play More"
+        remarkColor = "red"
+    }
+    else if (playerScore >= 4 && playerScore < 7) {
+        remark = "Not too bad, not too bad. But still"
+        remarkColor = "orange"
+    }
+    else if (playerScore >= 7) {
+        remark = "Well Done ! I aM pRoUd Of YoU"
+        remarkColor = "green"
+    }
+    const playerGrade = (playerScore / 10) * 100
+
+    //data for score board display
+    document.getElementById('remarks').innerHTML = remark
+    document.getElementById('remarks').style.color = remarkColor
+    document.getElementById('grade-percentage').innerHTML = playerGrade
+    document.getElementById('wrong-answers').innerHTML = wrongAttempt
+    document.getElementById('right-answers').innerHTML = playerScore
+    document.getElementById('score-modal').style.display = "flex"
+}
+
+// closing score modal, reseting the game and reshuffles question
+
+function closeScoreModal() {
+    questionNumber = 1
+    playerScore = 0
+    wrongAttempt = 0
+    indexNumber = 0
+    shuffledQuestions = []
+    NextQuestion(indexNumber)
+    document.getElementById('score-modal').style.display = "none"
+}
+
+//function to close warning modal
+function closeOptionModal() {
+    document.getElementById('option-modal').style.display = "none"
+}
