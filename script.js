@@ -242,9 +242,9 @@
 let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
 
 function handleQuestions() { 
-    //function to shuffle and push 10 questions to shuffledQuestions array
+    //function to shuffle and push 15 questions to shuffledQuestions array
 //app would be dealing with 10questions per session
-    while (shuffledQuestions.length <= 9) {
+    while (shuffledQuestions.length <= 14) {
         const random = questions[Math.floor(Math.random() * questions.length)]
         if (!shuffledQuestions.includes(random)) {
             shuffledQuestions.push(random)
@@ -324,7 +324,7 @@ function handleNextQuestion() {
     checkForAnswer() // checking if player picked the  right or wrong answer
     unCheckRadioButtons() // delay next question for a second to not rush the player
     setTimeout(() => {
-        if (indexNumber <= 9 ) { //dispaly question as long as indext isnt greater than 9 ( which is 10)
+        if (indexNumber <= 2 ) { //dispaly question as long as indext isnt greater than 14 ( which is 15)
             NextQuestion(indexNumber)
         }
         else {
@@ -365,10 +365,18 @@ function handleEndGame() {
         remarkColor = "orange"
     }
     else if (playerScore >= 7) {
-        remark = "Well Done ! I aM pRoUd Of YoU"
+        remark = "Not too chabby, keep on going"
+        remarkColor = "orange"
+    }
+    else if (playerScore >= 10) {
+        remark = "Love it ! You're kind of a gamer"
         remarkColor = "green"
     }
-    const playerGrade = (playerScore / 10) * 100
+    else if (playerScore >= 15) {
+        remark = "WELL DONE, YOU'RE PROPER GAMING LAD !"
+        remarkColor = "gold"
+    }
+    const playerGrade = Math.round((playerScore / 15) * 100 )
 
     //data for score board display
     document.getElementById('remarks').innerHTML = remark

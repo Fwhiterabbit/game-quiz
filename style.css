@@ -179,6 +179,7 @@ modal-content-container {
     text-align: center;
 }
 
+
 .grade-details {
     width: 15rem;
     height: 10rem;
@@ -215,6 +216,21 @@ modal-content-container {
 
 .modal-button-container button:hover {
     background-color: rgb(83, 82, 82);
+}
+
+
+/* Rules */
+
+#rules-bg {
+    height: 12rem;
+    width: 20rem;
+    background-color: white;
+    opacity: 0.2;
+}
+
+#rules p {
+    color: black;
+    text-align: center;
 }
 
 /* Media for small and medium screens */

@@ -13,29 +13,29 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
 
         <!-- Modal when quiz end -->
-        <div class="modal-container" id="score-modal">
-            <div class="modal-content-container">
-                <h1>Congratulation You Have Completed The Quiz</h1>
+            <div class="modal-container" id="score-modal">
+                <div class="modal-content-container">
+                    <h1>Congratulation You Have Completed The Quiz</h1>
 
-                <div class="grade-details">
-                    <p>Attempts : 10</p>
-                    <p>Wrong Answers : <span id="wrong-answers"></span></p>
-                    <p>Right Answers : <span id="right-answers"></span></p>
-                    <p>Grade : <spann id="grade-percentage"></spann>%</p>
-                    <p><span id="remarks"></span></p>
-                </div>
+                    <div class="grade-details">
+                        <p>Attempts : 10</p>
+                        <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                        <p>Right Answers : <span id="right-answers"></span></p>
+                        <p>Grade : <spann id="grade-percentage"></spann>%</p>
+                        <p><span id="remarks"></span></p>
+                    </div>
 
-                <div class="modal-button-container">
-                    <button onclick="closeScoreModal()">Continue</button>
+                    <div class="modal-button-container">
+                        <button onclick="closeScoreModal()">Continue</button>
+                    </div>
                 </div>
             </div>
-        </div>
         <!-- End of modal for quiz details-->
 
         <div class="game-quiz-container">
             <div class="game-details-container">
-                <h1>Score : <span id="player-score"></span> / 10</h1>
-                <h1>Question : <span id="question-number"></span> / 10</h1>
+                <h1>Score : <span id="player-score"></span> / 15</h1>
+                <h1>Question : <span id="question-number"></span> / 15</h1>
             </div>
 
             <div class="game-question-container">
@@ -79,6 +79,12 @@
 
             <div class="next-button-container">
                 <button onclick="handleNextQuestion()">Next Question</button>
+            </div>
+        </div>
+
+        <div id="rules-bg">
+            <div id="rules">
+                <p>Rules HERE:</p>
             </div>
         </div>
 
