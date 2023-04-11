@@ -2,229 +2,238 @@
  //you can change the questions to your own taste or even add more questions..
  const questions = [
     {
-        question: "How many days makes a week ?",
-        optionA: "10 days",
-        optionB: "14 days",
-        optionC: "5 days",
-        optionD: "7 days",
+        question: "In the game 'Minecraft,' what is the main objective?",
+        optionA: "Build structures",
+        optionB: "Collect resources",
+        optionC: "Survive against monsters",
+        optionD: "All of the above",
         correctOption: "optionD"
     },
 
     {
-        question: "How many players are allowed on a soccer pitch ?",
-        optionA: "10 players",
-        optionB: "11 players",
-        optionC: "9 players",
-        optionD: "12 players",
+        question: "Which of these is NOT a playable character in 'Super Smash Bros. Ultimate'?",
+        optionA: "Mario",
+        optionB: "Sonic",
+        optionC: "Master Chief",
+        optionD: "Pikachu",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "What is the name of the main character in the game 'Assassin's Creed'?",
+        optionA: "Ezio Auditore",
+        optionB: "Altaïr Ibn-La'Ahad",
+        optionC: "Desmond Miles",
+        optionD: "Bayek of Siwa",
         correctOption: "optionB"
     },
 
     {
-        question: "Who was the first President of USA ?",
-        optionA: "Donald Trump",
-        optionB: "Barack Obama",
-        optionC: "Abraham Lincoln",
-        optionD: "George Washington",
+        question: "In 'Call of Duty: Black Ops Cold War,' what is the name of the main antagonist?",
+        optionA: "Viktor Reznov",
+        optionB: "Raul Menendez",
+        optionC: "Friedrich Steiner",
+        optionD: "Perseus",
         correctOption: "optionD"
     },
 
     {
-        question: "30 days has ______ ?",
-        optionA: "January",
-        optionB: "December",
-        optionC: "June",
-        optionD: "August",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "How manay hours can be found in a day ?",
-        optionA: "30 hours",
-        optionB: "38 hours",
-        optionC: "48 hours",
-        optionD: "24 hours",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "Which is the longest river in the world ?",
-        optionA: "River Nile",
-        optionB: "Long River",
-        optionC: "River Niger",
-        optionD: "Lake Chad",
+        question: "What is the name of the character you play as in 'The Legend of Zelda: Breath of the Wild'?",
+        optionA: "Link",
+        optionB: "Zelda",
+        optionC: "Ganon",
+        optionD: "Mipha",
         correctOption: "optionA"
     },
 
     {
-        question: "_____ is the hottest Continent on Earth ?",
-        optionA: "Oceania",
-        optionB: "Antarctica",
-        optionC: "Africa",
-        optionD: "North America",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "Which country is the largest in the world ?",
-        optionA: "Russia",
-        optionB: "Canada",
-        optionC: "Africa",
-        optionD: "Egypt",
+        question: "Which game franchise is known for its parkour-style gameplay?",
+        optionA: "Assassin's Creed",
+        optionB: "Far Cry",
+        optionC: "Watch Dogs",
+        optionD: "Grand Theft Auto",
         correctOption: "optionA"
     },
 
     {
-        question: "Which of these numbers is an odd number ?",
-        optionA: "Ten",
-        optionB: "Twelve",
-        optionC: "Eight",
-        optionD: "Eleven",
-        correctOption: "optionD"
-    },
-
-    {
-        question: `"You Can't see me" is a popular saying by`,
-        optionA: "Eminem",
-        optionB: "Bill Gates",
-        optionC: "Chris Brown",
-        optionD: "John Cena",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "Where is the world tallest building located ?",
-        optionA: "Africa",
-        optionB: "California",
-        optionC: "Dubai",
-        optionD: "Italy",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "The longest river in the United Kingdom is ?",
-        optionA: "River Severn",
-        optionB: "River Mersey",
-        optionC: "River Trent",
-        optionD: "River Tweed",
-        correctOption: "optionA"
-    },
-
-
-    {
-        question: "How many permanent teeth does a dog have ?",
-        optionA: "38",
-        optionB: "42",
-        optionC: "40",
-        optionD: "36",
+        question: "In 'World of Warcraft,' what is the name of the primary villain?",
+        optionA: "Kil'jaeden",
+        optionB: "Sargeras",
+        optionC: "Arthas Menethil",
+        optionD: "Gul'dan",
         correctOption: "optionB"
     },
 
     {
-        question: "Which national team won the football World cup in 2018 ?",
-        optionA: "England",
-        optionB: "Brazil",
-        optionC: "Germany",
-        optionD: "France",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "Which US state was Donald Trump Born ?",
-        optionA: "New York",
-        optionB: "California",
-        optionC: "New Jersey",
-        optionD: "Los Angeles",
+        question: "What is the name of the playable character in 'Half-Life 2'?",
+        optionA: "Gordon Freeman",
+        optionB: "Alyx Vance",
+        optionC: "Isaac Clarke",
+        optionD: "Chell",
         correctOption: "optionA"
     },
 
     {
-        question: "How man states does Nigeria have ?",
-        optionA: "24",
-        optionB: "30",
-        optionC: "36",
-        optionD: "37",
+        question: "Which of these characters is NOT in 'Overwatch'?",
+        optionA: "Tracer",
+        optionB: "Solider: 76",
+        optionC: "Ryu",
+        optionD: "Junkrat",
         correctOption: "optionC"
     },
 
     {
-        question: "____ is the capital of Nigeria ?",
-        optionA: "Abuja",
-        optionB: "Lagos",
-        optionC: "Calabar",
-        optionD: "Kano",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "Los Angeles is also known as ?",
-        optionA: "Angels City",
-        optionB: "Shining city",
-        optionC: "City of Angels",
-        optionD: "Lost Angels",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "What is the capital of Germany ?",
-        optionA: "Georgia",
-        optionB: "Missouri",
-        optionC: "Oklahoma",
-        optionD: "Berlin",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "How many sides does an hexagon have ?",
-        optionA: "Six",
-        optionB: "Sevene",
-        optionC: "Four",
-        optionD: "Five",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "How many planets are currently in the solar system ?",
-        optionA: "Eleven",
-        optionB: "Seven",
-        optionC: "Nine",
-        optionD: "Eight",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "Which Planet is the hottest ?",
-        optionA: "Jupitar",
-        optionB: "Mercury",
-        optionC: "Earth",
-        optionD: "Venus",
+        question: "What is the name of the protagonist in 'Red Dead Redemption 2'?",
+        optionA: "John Marston",
+        optionB: "Arthur Morgan",
+        optionC: "Dutch van der Linde",
+        optionD: "Bill Williamson",
         correctOption: "optionB"
     },
 
     {
-        question: "where is the smallest bone in human body located?",
-        optionA: "Toes",
-        optionB: "Ears",
-        optionC: "Fingers",
-        optionD: "Nose",
+        question: "Which game series is known for its 'Nuka-Cola' soft drink?",
+        optionA: "Deus Ex",
+        optionB: "BioShock",
+        optionC: "Doom",
+        optionD: "Fallout",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "What is the name of the first level in the original 'Super Mario Bros.' game?",
+        optionA: "Mushroom World",
+        optionB: "World 1-0",
+        optionC: "Bowser's Path",
+        optionD: "World 1-1",
+        correctOption: "optionD"
+    },
+
+
+    {
+        question: "Which of these is NOT a playable race in 'The Elder Scrolls V: Skyrim'?",
+        optionA: "Nord",
+        optionB: "Orc",
+        optionC: "High Elf",
+        optionD: "Sylph",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "In 'Portal,' what is the name of the AI character that guides you through the game?",
+        optionA: "GLaDOS",
+        optionB: "Wheatley",
+        optionC: "Turret",
+        optionD: "Companion Cube",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "What is the name of the enemy faction in 'Halo'?",
+        optionA: "The Covenant",
+        optionB: "The Flood",
+        optionC: "The Prometheans",
+        optionD: "The Banished",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "Which game series features the character 'Solid Snake'?",
+        optionA: "Metal Gear",
+        optionB: "Resident Evil",
+        optionC: "Silent Hill",
+        optionD: "Dead Space",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "What is the name of the main character in the game 'Horizon Zero Dawn'?",
+        optionA: "Aloy",
+        optionB: "Sylens",
+        optionC: "Rost",
+        optionD: "Erend",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "What is the name of the main character in 'God of War'?",
+        optionA: "Zeus",
+        optionB: "Sasuke",
+        optionC: "Kratos",
+        optionD: "Odus",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "In 'The Witcher 3: Wild Hunt,' what is the name of the main character?",
+        optionA: "Triss Merigold",
+        optionB: "Yennefer",
+        optionC: "Ciri",
+        optionD: "Geralt of Rivia",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "Which game franchise features the character Nathan Drake?",
+        optionA: "Uncharted",
+        optionB: "Tomb Raider",
+        optionC: "Assassin's Creed",
+        optionD: "Grand Theft Auto",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "In 'Dark Souls,' what is the name of the main protagonist?",
+        optionA: "The Chosen Undead",
+        optionB: "The Ashen One",
+        optionC: "The Hunter",
+        optionD: "The Dragonborn",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "What is the name of the enemy faction in 'Destiny'?",
+        optionA: "The Cabal",
+        optionB: "The Fallen",
+        optionC: "The Vex",
+        optionD: "The Taken",
         correctOption: "optionB"
     },
 
     {
-        question: "How many hearts does an Octopus have ?",
-        optionA: "One",
-        optionB: "Two",
-        optionC: "Three",
-        optionD: "Four",
-        correctOption: "optionC"
+        question: "Which of these is NOT a playable character in 'League of Legends'?",
+        optionA: "Ashe",
+        optionB: "D.Va",
+        optionC: "Lux",
+        optionD: "Jinx",
+        correctOption: "optionB"
     },
 
     {
-        question: "How many teeth does an adult human have ?",
-        optionA: "28",
-        optionB: "30",
-        optionC: "32",
-        optionD: "36",
-        correctOption: "optionC"
+        question: "In 'Borderlands 3,' what is the name of the main antagonist ?",
+        optionA: "Handsome Jack",
+        optionB: "Tyreen Calypso",
+        optionC: "Rhys Strongfork",
+        optionD: "Zer0",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "What is the name of the playable character in 'Devil May Cry' ?",
+        optionA: "Dante",
+        optionB: "Vergil",
+        optionC: "Nero",
+        optionD: "All of the above",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "Which of these is NOT a playable character in 'Street Fighter V' ?",
+        optionA: "Ryu",
+        optionB: "Ken",
+        optionC: "Akuma",
+        optionD: "Sub-Zero",
+        correctOption: "optionD"  
     }
 
 ]
