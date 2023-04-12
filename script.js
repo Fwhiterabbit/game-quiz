@@ -324,7 +324,7 @@ function handleNextQuestion() {
     checkForAnswer() // checking if player picked the  right or wrong answer
     unCheckRadioButtons() // delay next question for a second to not rush the player
     setTimeout(() => {
-        if (indexNumber <= 2 ) { //dispaly question as long as indext isnt greater than 14 ( which is 15)
+        if (indexNumber <= 14 ) { //dispaly question as long as indext isnt greater than 14 ( which is 15)
             NextQuestion(indexNumber)
         }
         else {
@@ -372,7 +372,7 @@ function handleEndGame() {
         remark = "Love it ! You're kind of a gamer"
         remarkColor = "green"
     }
-    else if (playerScore >= 15) {
+    else if (playerScore = 15) {
         remark = "WELL DONE, YOU'RE PROPER GAMING LAD !"
         remarkColor = "gold"
     }
