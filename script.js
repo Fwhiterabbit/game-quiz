@@ -328,7 +328,7 @@ function handleNextQuestion() {
             NextQuestion(indexNumber)
         }
         else {
-            handleEndGame() // game end if index > 9 
+            handleEndGame() // game end if index > 14 
         }
         resetOptionBackground()
     }, 1000);
