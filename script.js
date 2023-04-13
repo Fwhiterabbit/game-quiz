@@ -360,19 +360,19 @@ function handleEndGame() {
         remark = "Bad Gamer - You Should Play More"
         remarkColor = "red"
     }
-    else if (playerScore >= 4 && playerScore < 7) {
+    else if (playerScore <= 4 ) {
         remark = "Not too bad, not too bad. But still"
         remarkColor = "orange"
     }
-    else if (playerScore >= 7) {
-        remark = "Not too chabby, keep on going"
+    else if (playerScore <= 7) {
+        remark = "Not too shabby, keep on going"
         remarkColor = "orange"
     }
-    else if (playerScore >= 10) {
+    else if (playerScore <= 10) {
         remark = "Love it ! You're kind of a gamer"
         remarkColor = "green"
     }
-    else if (playerScore = 15) {
+    else (playerScore = 15) {
         remark = "WELL DONE, YOU'RE PROPER GAMING LAD !"
         remarkColor = "gold"
     }
