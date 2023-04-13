@@ -372,7 +372,7 @@ function handleEndGame() {
         remark = "Love it ! You're kind of a gamer"
         remarkColor = "green"
     }
-    else (playerScore = 15) {
+    else if (playerScore = 15) {
         remark = "WELL DONE, YOU'RE PROPER GAMING LAD !"
         remarkColor = "gold"
     }
