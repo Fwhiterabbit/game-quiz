@@ -30,6 +30,22 @@ main {
     background-position: center;
 }
 
+
+
+/* Logo */
+#logo-wrapper {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+#logo {
+    font-size: 54px;
+}
+
+.logo-font {
+    color: white;
+}
+
 /* Fonts */
 
 h1 {
@@ -345,3 +361,50 @@ ul {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+
+
+/* LOGO */
+
+/*.logo {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }*/
+
+  .logo {
+    padding: 10px;
+    margin: 5px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  
