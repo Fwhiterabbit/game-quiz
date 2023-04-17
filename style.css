@@ -312,7 +312,7 @@ ul {
         width: 90%;
     }
     
-    #logo.cont {
+    #logo-cont {
         display: none;
     }
 }
@@ -327,7 +327,7 @@ ul {
     display: none;
     }
 
-    #logo.cont {
+    #logo-cont {
         display: none;
     }
 
@@ -370,7 +370,7 @@ ul {
 }
 
 
-@media(min-width : 700px) and (max-width : 1200px){
+@media(min-width : 700px) and (max-width : 1450px){
     .game-quiz-container{
         width: 90%;
         height: 80vh;
@@ -380,7 +380,13 @@ ul {
     display: none;
     }
 
-    #logo.cont {
+    .logo {
+        width: 70%;
+        text-align: center;
+        font-size: 100px;
+    }
+
+    #logo-cont {
         display: none;
     }
 
