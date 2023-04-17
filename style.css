@@ -312,7 +312,7 @@ ul {
         width: 90%;
     }
     
-    .logo {
+    #logo.cont {
         display: none;
     }
 }
@@ -327,7 +327,7 @@ ul {
     display: none;
     }
 
-    .logo {
+    #logo.cont {
         display: none;
     }
 
@@ -369,6 +369,48 @@ ul {
     to {opacity: 1;}
 }
 
+
+@media(min-width : 700px) and (max-width : 1200px){
+    .game-quiz-container{
+        width: 90%;
+        height: 80vh;
+     }
+
+     #rules-bg {
+    display: none;
+    }
+
+    #logo.cont {
+        display: none;
+    }
+
+    #rules {
+        width: 90%;
+    }
+
+     .game-details-container h1{
+         font-size: 1rem;
+     }
+ 
+     .game-question-container{
+         height: 8rem;
+     }
+ 
+     .game-question-container h1{
+         font-size: 0.9rem;
+      }
+ 
+     .game-options-container span{
+         width: 90%;
+     }
+     .modal-content-container{
+         width: 90%;
+         height: 25rem;
+     }
+     .modal-content-container h1{
+         font-size: 1.2rem;
+     }
+ }
 
 
 /* LOGO */
