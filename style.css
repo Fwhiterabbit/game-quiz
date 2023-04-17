@@ -311,6 +311,10 @@ ul {
     #rules {
         width: 90%;
     }
+    
+    .logo {
+        display: none;
+    }
 }
 
 @media(min-width : 350px) and (max-width : 700px){
@@ -321,7 +325,10 @@ ul {
 
      #rules-bg {
     display: none;
-        
+    }
+
+    .logo {
+        display: none;
     }
 
     #rules {
