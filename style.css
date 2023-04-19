@@ -241,38 +241,6 @@ input[type=radio]:checked ~ .option {
 }
 
 
-/* Rules */
-
-#rules-bg {
-    height: 12rem;
-    width: 20rem;
-    background-color: white;
-    opacity: 0.8;
-
-    position: absolute;
-    left: 5%;
-    padding: 2px;
-    margin: 2px;
-
-    border-radius: 20px;
-}
-
-#rules p {
-    color: black;
-    text-align: center;
-}
-
-#rules {
-    text-align: center;
-    font-weight: 600;
-
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
 
 /* Media for small and medium screens */
 
