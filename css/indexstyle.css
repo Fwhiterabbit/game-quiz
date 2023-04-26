@@ -73,61 +73,49 @@ body {
 
   /* Screen Size */
 
-  @media(min-width : 300px) and (max-width : 350px) {
-    #container {
-      width: 264px;
-      height: 256px;
-      left: -13px;
-      top: -12px;
-    }
 
-    .gaming-button {
-      letter-spacing: 1px;
-      padding: 10px;
-      margin: 10px;
-    }
+/* Large screens (desktops and laptops) */
+@media only screen and (min-width: 961px) {
+  body {
+    font-size: 18px;
+  }
+}
 
-    p {
-      font-size: 14px;
-    }
+/* Tablets (768x1024px) */
+@media only screen and (width: 768px) and (height: 1024px) {
+  body {
+    font-size: 18px;
   }
 
+  #container {
+    left: 120px;
+  }
+}
 
-
-  @media(min-width : 350px) and (max-width : 700px) {
-    #container {
-      width: 20rem;
-      height: 27rem;
-      left: -13px;
-      top: -12px;
-    }
-
-    .gaming-button {
-      letter-spacing: 1px;
-      padding: 10px;
-      margin: 10px;
-    }
-
-    p {
-      font-size: 25px;
-    }
+/* Smartphones (320x480px) */
+@media only screen and (width: 320px) and (height: 480px) {
+  body {
+    font-size: 14px;
   }
 
-
-
-  @media(min-width : 700px) and (max-width : 1450px) {
-    #container {
-      width: 41rem;
-      height: 50rem;
-      left: -13px;
-      top: -12px;
-    }
-    
-    p {
-      font-size: 54px;
-    }
-
-    .gaming-button {
-      font-size: 100px; 
-      }
+  #container {
+    width: 90%;
+    height: 250px;
+    left: -20px;
+    top: -20px;
   }
+
+  p {
+    font-size: 10px;
+  }
+
+  .gaming-button {
+    font-size: 20px;
+  }
+
+  #button {
+    top: 20px;
+  }
+}
+
+
