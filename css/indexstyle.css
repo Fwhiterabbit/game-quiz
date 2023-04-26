@@ -10,14 +10,14 @@ html, body {
 
 body {
     font-family: 'Montserrat', serif;
-    background: url('mario.jpg');
+    background: url('../images/mario.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 #container {
-    height: 25rem;
+    height: 23rem;
     width: 30rem;
     background-color: black;
     margin: 30px;
@@ -59,3 +59,22 @@ body {
     box-shadow: 0px 6px 0px #D74343;
   }
   
+
+  /* Font styles */
+
+  p {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #FFF;
+    text-shadow: 0 0 5px #F00, 0 0 10px #F00, 0 0 15px #F00, 0 0 20px #FFF, 0 0 25px #FFF, 0 0 30px #FFF, 0 0 35px #FFF;
+  }
+  
+
+  /* Screen Size */
+
+  @media(min-width : 300px) and (max-width : 350px) 
+
+  @media(min-width : 350px) and (max-width : 700px)
+
+  @media(min-width : 700px) and (max-width : 1450px)

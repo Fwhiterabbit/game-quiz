@@ -23,7 +23,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: black;
-    background: url('gaming.jpg');
+    background: url('../images/gaming.jpg');
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
@@ -388,19 +388,6 @@ input[type=radio]:checked ~ .option {
 
 
 /* LOGO */
-
-/*.logo {
-    background-color: #000;
-    color: #fff;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }*/
 
   .logo {
     padding: 10px;
