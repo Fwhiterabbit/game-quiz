@@ -5,3 +5,6 @@
 ##### Whether you're a trivia buff or just looking for a fun way to pass the time, this game is sure to keep you entertained. So what are you waiting for? Click on the "Play Now" button and get ready to put your knowledge to the test!
 
 ![quiz](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/06009425-ef57-41c0-b02d-2f6d3d8363d4)
+ 
+ ## Game contains Main Page and Game Page.
+ ![quiz2](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/eb8e2483-760f-46c7-a37c-ecee0a78de6c)
