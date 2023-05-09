@@ -1,6 +1,5 @@
-//this would be the object shape for storing the questions  
- //you can change the questions to your own taste or even add more questions..
- const questions = [
+
+const questions = [
     {
         question: "In the game 'Minecraft,' what is the main objective?",
         optionA: "Build structures",
@@ -236,35 +235,31 @@
         correctOption: "optionD"  
     }
 
-]
+];
 
 
-let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
+let shuffledQuestions = []; 
 
 function handleQuestions() { 
-    //function to shuffle and push 15 questions to shuffledQuestions array
-//app would be dealing with 10questions per session
     while (shuffledQuestions.length <= 14) {
-        const random = questions[Math.floor(Math.random() * questions.length)]
+        const random = questions[Math.floor(Math.random() * questions.length)];
         if (!shuffledQuestions.includes(random)) {
-            shuffledQuestions.push(random)
+            shuffledQuestions.push(random);
         }
     }
 }
 
 
-let questionNumber = 1 //holds the current question number
-let playerScore = 0  //holds the player score
-let wrongAttempt = 0 //amount of wrong answers picked by player
-let indexNumber = 0 //will be used in displaying next question
+let questionNumber = 1; 
+let playerScore = 0;  
+let wrongAttempt = 0;
+let indexNumber = 0; 
 
-// function for displaying next question in the array to dom
-//also handles displaying players and quiz information to dom
 function NextQuestion(index) {
-    handleQuestions()
-    const currentQuestion = shuffledQuestions[index]
-    document.getElementById("question-number").innerHTML = questionNumber
-    document.getElementById("player-score").innerHTML = playerScore
+    handleQuestions();
+    const currentQuestion = shuffledQuestions[index];
+    document.getElementById("question-number").innerHTML = questionNumber;
+    document.getElementById("player-score").innerHTML = playerScore;
     document.getElementById("display-question").innerHTML = currentQuestion.question;
     document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
     document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
@@ -275,74 +270,65 @@ function NextQuestion(index) {
 
 
 function checkForAnswer() {
-    const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
-    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
-    const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
-    let correctOption = null
+    const currentQuestion = shuffledQuestions[indexNumber]; 
+    const currentQuestionAnswer = currentQuestion.correctOption; 
+    const options = document.getElementsByName("option");
+    let correctOption = null;
 
     options.forEach((option) => {
         if (option.value === currentQuestionAnswer) {
-            //get's correct's radio input with correct answer
-            correctOption = option.labels[0].id
+            correctOption = option.labels[0].id;
         }
-    })
+    });
 
-    //checking to make sure a radio input has been checked or an option being chosen
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
-        document.getElementById('option-modal').style.display = "flex"
+        document.getElementById('option-modal').style.display = "flex";
     }
 
-    //checking if checked radio button is same as answer
     options.forEach((option) => {
         if (option.checked === true && option.value === currentQuestionAnswer) {
-            document.getElementById(correctOption).style.backgroundColor = "green"
-            playerScore++ //adding to player's score
-            indexNumber++ //adding 1 to index so has to display next question..
-            //set to delay question number till when next question loads
+            document.getElementById(correctOption).style.backgroundColor = "green";
+            playerScore++; 
+            indexNumber++;
             setTimeout(() => {
-                questionNumber++
-            }, 1000)
+                questionNumber++;
+            }, 1000);
         }
 
         else if (option.checked && option.value !== currentQuestionAnswer) {
-            const wrongLabelId = option.labels[0].id
-            document.getElementById(wrongLabelId).style.backgroundColor = "red"
-            document.getElementById(correctOption).style.backgroundColor = "green"
-            wrongAttempt++ //adds 1 to wrong attempts 
-            indexNumber++
-            //set to delay question number till when next question loads
+            const wrongLabelId = option.labels[0].id;
+            document.getElementById(wrongLabelId).style.backgroundColor = "red";
+            document.getElementById(correctOption).style.backgroundColor = "green";
+            wrongAttempt++;
+            indexNumber++;
             setTimeout(() => {
-                questionNumber++
-            }, 1000)
+                questionNumber++;
+            }, 1000);
         }
-    })
+    });
 }
 
-// function for when next question is called
-
 function handleNextQuestion() {
-    checkForAnswer() // checking if player picked the  right or wrong answer
-    unCheckRadioButtons() // delay next question for a second to not rush the player
+    checkForAnswer();
+    unCheckRadioButtons(); 
     setTimeout(() => {
-        if (indexNumber <= 14 ) { //dispaly question as long as indext isnt greater than 14 ( which is 15)
-            NextQuestion(indexNumber)
+        if (indexNumber <= 14 ) {
+            NextQuestion(indexNumber);
         }
         else {
-            handleEndGame() // game end if index > 14 
+            handleEndGame();
         }
-        resetOptionBackground()
+        resetOptionBackground();
     }, 1000);
 }
 
-//  function that sets background back to null after displaying right or wrong answer
 function resetOptionBackground() {
     const options = document.getElementsByName('option');
     options.forEach((option) => {
-        document.getElementById(option.labels[0].id).style.backgroundColor = ""
-    })
+        document.getElementById(option.labels[0].id).style.backgroundColor = "";
+    });
 }
 
-// function that uncheck all radio buttons for next question
 function unCheckRadioButtons() {
     const options = document.getElementsByName('option');
     for (let i = 0; i < options.length; i++) {
@@ -350,56 +336,50 @@ function unCheckRadioButtons() {
     }
 }
 
-// function for when all questions being answer..
 function handleEndGame() {
-    let remark = null
-    let remarkColor = null
+    let remark = null;
+    let remarkColor = null;
 
-    // condition for check players remark and remarks color
     if ( playerScore <= 3) {
-        remark = "Bad Gamer - You Should Play More"
-        remarkColor = "red"
+        remark = "Bad Gamer - You Should Play More";
+        remarkColor = "red";
     }
     else if (playerScore <= 4 ) {
-        remark = "Not too bad, not too bad. But still"
-        remarkColor = "orange"
+        remark = "Not too bad, not too bad. But still";
+        remarkColor = "orange";
     }
     else if (playerScore <= 7) {
-        remark = "Not too shabby, keep on going"
-        remarkColor = "orange"
+        remark = "Not too shabby, keep on going";
+        remarkColor = "orange";
     }
     else if (playerScore <= 10) {
-        remark = "Love it ! You're kind of a gamer"
-        remarkColor = "green"
+        remark = "Love it ! You're kind of a gamer";
+        remarkColor = "green";
     }
-    else if (playerScore = 15) {
-        remark = "WELL DONE, YOU'RE PROPER GAMING LAD !"
-        remarkColor = "gold"
+    else if (playerScore == 15) {
+        remark = "WELL DONE, YOU'RE PROPER GAMING LAD !";
+        remarkColor = "gold";
     }
-    const playerGrade = Math.round((playerScore / 15) * 100 )
+    const playerGrade = Math.round((playerScore / 15) * 100 );
 
-    //data for score board display
-    document.getElementById('remarks').innerHTML = remark
-    document.getElementById('remarks').style.color = remarkColor
-    document.getElementById('grade-percentage').innerHTML = playerGrade
-    document.getElementById('wrong-answers').innerHTML = wrongAttempt
-    document.getElementById('right-answers').innerHTML = playerScore
-    document.getElementById('score-modal').style.display = "flex"
+    document.getElementById('remarks').innerHTML = remark;
+    document.getElementById('remarks').style.color = remarkColor;
+    document.getElementById('grade-percentage').innerHTML = playerGrade;
+    document.getElementById('wrong-answers').innerHTML = wrongAttempt;
+    document.getElementById('right-answers').innerHTML = playerScore;
+    document.getElementById('score-modal').style.display = "flex";
 }
-
-// closing score modal, reseting the game and reshuffles question
 
 function closeScoreModal() {
-    questionNumber = 1
-    playerScore = 0
-    wrongAttempt = 0
-    indexNumber = 0
-    shuffledQuestions = []
-    NextQuestion(indexNumber)
-    document.getElementById('score-modal').style.display = "none"
+    questionNumber = 1;
+    playerScore = 0;
+    wrongAttempt = 0;
+    indexNumber = 0;
+    shuffledQuestions = [];
+    NextQuestion(indexNumber);
+    document.getElementById('score-modal').style.display = "none";
 }
 
-//function to close warning modal
 function closeOptionModal() {
-    document.getElementById('option-modal').style.display = "none"
+    document.getElementById('option-modal').style.display = "none";
 }
