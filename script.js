@@ -1,4 +1,4 @@
-
+// array that holds questions
 const questions = [
     {
         question: "In the game 'Minecraft,' what is the main objective?",
@@ -232,15 +232,15 @@ const questions = [
         optionB: "Ken",
         optionC: "Akuma",
         optionD: "Sub-Zero",
-        correctOption: "optionD"  
+        correctOption: "optionD"
     }
 
 ];
 
 
-let shuffledQuestions = []; 
+let shuffledQuestions = []; //empty array that hold  shuffled questions out of all available questions
 
-function handleQuestions() { 
+function handleQuestions() { // function that shuffle and push 15 questions to shuffledQuestions() array
     while (shuffledQuestions.length <= 14) {
         const random = questions[Math.floor(Math.random() * questions.length)];
         if (!shuffledQuestions.includes(random)) {
@@ -250,12 +250,12 @@ function handleQuestions() {
 }
 
 
-let questionNumber = 1; 
-let playerScore = 0;  
-let wrongAttempt = 0;
-let indexNumber = 0; 
+let questionNumber = 1; // holds current question number
+let playerScore = 0; // player score
+let wrongAttempt = 0; // amout of wrong answers
+let indexNumber = 0; // it will be used in displaying next question
 
-function NextQuestion(index) {
+function NextQuestion(index) { // function for displaying next question in the array to dom and handles displaying player and quiz info to dom
     handleQuestions();
     const currentQuestion = shuffledQuestions[index];
     document.getElementById("question-number").innerHTML = questionNumber;
@@ -269,28 +269,28 @@ function NextQuestion(index) {
 }
 
 
-function checkForAnswer() {
-    const currentQuestion = shuffledQuestions[indexNumber]; 
-    const currentQuestionAnswer = currentQuestion.correctOption; 
-    const options = document.getElementsByName("option");
+function checkForAnswer() { // function that check answers
+    const currentQuestion = shuffledQuestions[indexNumber]; // gets current quiestion
+    const currentQuestionAnswer = currentQuestion.correctOption; // gets current questions answer
+    const options = document.getElementsByName("option"); // gets all elements in dom with name of "option"
     let correctOption = null;
 
-    options.forEach((option) => {
+    options.forEach((option) => { // gets correct radio input with correct answer
         if (option.value === currentQuestionAnswer) {
             correctOption = option.labels[0].id;
         }
     });
-
+    // checking to make sure a radio input has been checked or an option has been chosen
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
         document.getElementById('option-modal').style.display = "flex";
     }
-
+    // checking if checked radio button is the same as answer
     options.forEach((option) => {
         if (option.checked === true && option.value === currentQuestionAnswer) {
             document.getElementById(correctOption).style.backgroundColor = "green";
-            playerScore++; 
-            indexNumber++;
-            setTimeout(() => {
+            playerScore++; // adding point to player score
+            indexNumber++; // adding 1 to index to display next question
+            setTimeout(() => { // set time to delay question number till when next question loads
                 questionNumber++;
             }, 1000);
         }
@@ -299,7 +299,7 @@ function checkForAnswer() {
             const wrongLabelId = option.labels[0].id;
             document.getElementById(wrongLabelId).style.backgroundColor = "red";
             document.getElementById(correctOption).style.backgroundColor = "green";
-            wrongAttempt++;
+            wrongAttempt++; // add 1 to wrong answer
             indexNumber++;
             setTimeout(() => {
                 questionNumber++;
@@ -308,43 +308,43 @@ function checkForAnswer() {
     });
 }
 
-function handleNextQuestion() {
-    checkForAnswer();
-    unCheckRadioButtons(); 
-    setTimeout(() => {
-        if (indexNumber <= 14 ) {
+function handleNextQuestion() { // called when the next button is called
+    checkForAnswer(); // check if player picked right or wrong answer
+    unCheckRadioButtons();
+    setTimeout(() => { // //delays next question displaying for a second just for some effects so questions don't rush in on player
+        if (indexNumber <= 14) { // displays next question as long as index number isn't greater than 14
             NextQuestion(indexNumber);
         }
         else {
-            handleEndGame();
+            handleEndGame(); // ends game if index number greater than 14 meaning we're already at the 15th question
         }
         resetOptionBackground();
     }, 1000);
 }
-
+//sets options background back to null after display the right/wrong colors
 function resetOptionBackground() {
     const options = document.getElementsByName('option');
     options.forEach((option) => {
         document.getElementById(option.labels[0].id).style.backgroundColor = "";
     });
 }
-
+// unchecking all radio buttons for next question
 function unCheckRadioButtons() {
     const options = document.getElementsByName('option');
     for (let i = 0; i < options.length; i++) {
         options[i].checked = false;
     }
 }
-
+// function for when all questions being answered
 function handleEndGame() {
     let remark = null;
     let remarkColor = null;
-
-    if ( playerScore <= 3) {
+    // condition check for player remark and remark color
+    if (playerScore <= 3) {
         remark = "Bad Gamer - You Should Play More";
         remarkColor = "red";
     }
-    else if (playerScore <= 4 ) {
+    else if (playerScore <= 4) {
         remark = "Not too bad, not too bad. But still";
         remarkColor = "orange";
     }
@@ -360,8 +360,8 @@ function handleEndGame() {
         remark = "WELL DONE, YOU'RE PROPER GAMING LAD !";
         remarkColor = "gold";
     }
-    const playerGrade = Math.round((playerScore / 15) * 100 );
-
+    const playerGrade = Math.round((playerScore / 15) * 100); // score calculator
+    // data to display to score board
     document.getElementById('remarks').innerHTML = remark;
     document.getElementById('remarks').style.color = remarkColor;
     document.getElementById('grade-percentage').innerHTML = playerGrade;
@@ -370,7 +370,7 @@ function handleEndGame() {
     document.getElementById('score-modal').style.display = "flex";
 }
 
-function closeScoreModal() {
+function closeScoreModal() { //closes score modal, resets game and reshuffles questions
     questionNumber = 1;
     playerScore = 0;
     wrongAttempt = 0;
@@ -380,6 +380,6 @@ function closeScoreModal() {
     document.getElementById('score-modal').style.display = "none";
 }
 
-function closeOptionModal() {
+function closeOptionModal() { // function to close warnig modal
     document.getElementById('option-modal').style.display = "none";
 }

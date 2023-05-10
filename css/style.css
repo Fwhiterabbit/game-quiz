@@ -1,13 +1,12 @@
-
-
-
+/* main page styles*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -30,9 +29,8 @@ main {
     background-position: center;
 }
 
-
-
 /* Logo */
+
 #logo-wrapper {
     padding: 5px;
     margin: 5px 0;
@@ -51,6 +49,18 @@ main {
 h1 {
     font-family: 'Righteous', cursive;
 }
+
+.game-details-container h1 {
+    font-size: 1.2rem;
+}
+
+.game-question-container h1 {
+    padding: 3px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* game styles */
 
 .game-quiz-container {
     width: 40rem;
@@ -71,10 +81,6 @@ h1 {
     align-items: center;
 }
 
-.game-details-container h1 {
-    font-size: 1.2rem;
-}
-
 .game-question-container {
     width: 80%;
     height: 8rem;
@@ -83,12 +89,6 @@ h1 {
     justify-content: center;
     border: 2px solid darkgray;
     border-radius: 25px;
-}
-
-.game-question-container h1 {
-    padding: 3px;
-    font-size: 1.1rem;
-    text-align: center;
 }
 
 .game-options-container {
@@ -127,12 +127,14 @@ span label:hover {
     color: black;
 }
 
+/* Button styles */
+
 input[type="radio"] {
     position: relative;
     display: none;
 }
 
-input[type=radio]:checked ~ .option {
+input[type=radio]:checked~.option {
     background: rgb(67, 51, 192);
 }
 
@@ -177,7 +179,7 @@ input[type=radio]:checked ~ .option {
     animation: fadeIn 1.2s ease-in-out;
 }
 
-/* color for end game background */
+/* color  and styles for end game background */
 
 .modal-content-container {
     height: 20rem;
@@ -200,7 +202,6 @@ input[type=radio]:checked ~ .option {
     color: lightgray;
     text-align: center;
 }
-
 
 .grade-details {
     width: 15rem;
@@ -240,8 +241,6 @@ input[type=radio]:checked ~ .option {
     background-color: rgb(83, 82, 82);
 }
 
-
-
 /* Media for small and medium screens */
 
 @media(min-width : 300px) and (max-width : 350px) {
@@ -249,29 +248,37 @@ input[type=radio]:checked ~ .option {
         width: 90%;
         height: 80vh;
     }
+
     .game-details-container h1 {
         font-size: 0.8rem;
     }
+
     .game-question-container {
         height: 6rem;
     }
+
     .game-question-container h1 {
         font-size: 0.9rem;
     }
+
     .game-options-container span {
         width: 90%;
         height: 2.5rem;
     }
+
     .game-options-container span label {
         font-size: 0.8rem;
     }
+
     .modal-content-container {
         width: 90%;
         height: 25rem;
     }
+
     .modal-button-container h1 {
         font-size: 1.2rem;
     }
+
     #rules-bg {
         display: none;
     }
@@ -279,20 +286,20 @@ input[type=radio]:checked ~ .option {
     #rules {
         width: 90%;
     }
-    
+
     #logo-cont {
         display: none;
     }
 }
 
-@media(min-width : 350px) and (max-width : 700px){
-    .game-quiz-container{
+@media(min-width : 350px) and (max-width : 700px) {
+    .game-quiz-container {
         width: 90%;
         height: 80vh;
-     }
+    }
 
-     #rules-bg {
-    display: none;
+    #rules-bg {
+        display: none;
     }
 
     #logo-cont {
@@ -303,49 +310,60 @@ input[type=radio]:checked ~ .option {
         width: 90%;
     }
 
-     .game-details-container h1{
-         font-size: 1rem;
-     }
- 
-     .game-question-container{
-         height: 8rem;
-     }
- 
-     .game-question-container h1{
-         font-size: 0.9rem;
-      }
- 
-     .game-options-container span{
-         width: 90%;
-     }
-     .modal-content-container{
-         width: 90%;
-         height: 25rem;
-     }
-     .modal-content-container h1{
-         font-size: 1.2rem;
-     }
- }
+    .game-details-container h1 {
+        font-size: 1rem;
+    }
+
+    .game-question-container {
+        height: 8rem;
+    }
+
+    .game-question-container h1 {
+        font-size: 0.9rem;
+    }
+
+    .game-options-container span {
+        width: 90%;
+    }
+
+    .modal-content-container {
+        width: 90%;
+        height: 25rem;
+    }
+
+    .modal-content-container h1 {
+        font-size: 1.2rem;
+    }
+}
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-
-@media(min-width : 700px) and (max-width : 1450px){
-    .game-quiz-container{
+@media(min-width : 700px) and (max-width : 1450px) {
+    .game-quiz-container {
         width: 90%;
         height: 80vh;
-     }
+    }
 
-     #rules-bg {
-    display: none;
+    #rules-bg {
+        display: none;
     }
 
     .logo {
@@ -362,34 +380,35 @@ input[type=radio]:checked ~ .option {
         width: 90%;
     }
 
-     .game-details-container h1{
-         font-size: 1rem;
-     }
- 
-     .game-question-container{
-         height: 8rem;
-     }
- 
-     .game-question-container h1{
-         font-size: 0.9rem;
-      }
- 
-     .game-options-container span{
-         width: 90%;
-     }
-     .modal-content-container{
-         width: 90%;
-         height: 25rem;
-     }
-     .modal-content-container h1{
-         font-size: 1.2rem;
-     }
- }
+    .game-details-container h1 {
+        font-size: 1rem;
+    }
 
+    .game-question-container {
+        height: 8rem;
+    }
+
+    .game-question-container h1 {
+        font-size: 0.9rem;
+    }
+
+    .game-options-container span {
+        width: 90%;
+    }
+
+    .modal-content-container {
+        width: 90%;
+        height: 25rem;
+    }
+
+    .modal-content-container h1 {
+        font-size: 1.2rem;
+    }
+}
 
 /* LOGO */
 
-  .logo {
+.logo {
     padding: 10px;
     margin: 5px;
     background-color: #000;
@@ -402,19 +421,18 @@ input[type=radio]:checked ~ .option {
     border-radius: 10px;
     text-transform: uppercase;
     animation: pulse 2s ease-in-out infinite;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  
-  
+}
