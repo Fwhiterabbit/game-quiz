@@ -12,6 +12,11 @@
  ## And Game Page.
  ##### Where you playting The Quiz Game.
  ![quiz3](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/1d7cf819-5a4a-40cd-bafb-07862bc61430)
+ 
+ ## End Game
+ ##### After you complete 15 questionaries you will be able to see your resuls with the grade depending on how many questions you get right.
+ ![quiz4](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/fae1142a-8fcb-46d2-ad7f-478e6119ea0e)
+
 
 # Features (playable on)
   * Website and Game has media screen for small screens ( Mobile Phones)
