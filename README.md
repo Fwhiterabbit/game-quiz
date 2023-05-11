@@ -31,6 +31,8 @@
   * Website and Game has media screen for small screens ( Mobile Phones)
   * Medium Size screen ( tablets )
   * Large Screen ( Laptops & Monitor )
+  * Additional comment text depending on your score
+  * Old School and modern questions about famous games
 
 # Testing
 ### Game was tested on:
