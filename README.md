@@ -50,10 +50,11 @@
 - No errors with the code were found on JSHint, a JavaScript Code Quality Tool.
 ![jsVali](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/61e7b6ce-129e-4ed0-814f-0eb1c94e3cef)
 
-# Credits
-- ChatGPT for making questions interesting and fun.
-- Internet for helping me built the game and explains how everything works.
 
 # Accessibility 
 ### Was running on Google Chrome Lighthouse
 ![quiz5](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/af69f728-9ea2-4e09-970c-abfe7c07910f)
+
+# Credits
+- ChatGPT for making questions interesting and fun.
+- YouTube, Discord, Slack for helping me built the game and explains how everything works.
