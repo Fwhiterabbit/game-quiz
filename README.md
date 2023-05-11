@@ -11,11 +11,20 @@
  ![quiz2](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/eb8e2483-760f-46c7-a37c-ecee0a78de6c)
  ## And Game Page.
  ##### Where you playting The Quiz Game.
+   * Green highlight stands for Correct Answer
+   * Red highlight stands for Wrong Answer
+
  ![quiz3](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/1d7cf819-5a4a-40cd-bafb-07862bc61430)
  
  ## End Game
  ##### After you complete 15 questionaries you will be able to see your resuls with the grade depending on how many questions you get right.
  ![quiz4](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/fae1142a-8fcb-46d2-ad7f-478e6119ea0e)
+ ###### There are 5 different grades depending on how many answer you'll get correct
+   * Grade 1 - 3 points will be marked as RED
+   * Grade 2 - 4 points will be marked as Orange
+   * Grade 3 - 7 points will be marked as Orange
+   * Grade 4 - 10 points will be marked as Green
+   * Grade 5 - 15 points will be marked as Gold
 
 
 # Features (playable on)
@@ -33,12 +42,18 @@
 # Valiator Testing
 1. HTML code:
 - No errors with code were found throught official W3C validator.
+![htmlVali](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/e0e9ff70-daac-4d80-af32-d653cf9772d5)
 2. CSS code:
 - No errors with code were found throught official W3C validator.
+![cssVali](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/64cffc86-56d7-4585-bbd8-f242ed2d656f)
 3. JavaScript code:
 - No errors with the code were found on JSHint, a JavaScript Code Quality Tool.
+![jsVali](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/61e7b6ce-129e-4ed0-814f-0eb1c94e3cef)
 
 # Credits
 - ChatGPT for making questions interesting and fun.
 - Internet for helping me built the game and explains how everything works.
 
+# Accessibility 
+### Was running on Google Chrome Lighthouse
+![quiz5](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/af69f728-9ea2-4e09-970c-abfe7c07910f)
