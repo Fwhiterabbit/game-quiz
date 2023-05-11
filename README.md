@@ -10,7 +10,7 @@
  ##### Where you are introduced to the rules of the game and Play Now button to start the game.
  ![quiz2](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/eb8e2483-760f-46c7-a37c-ecee0a78de6c)
  ## And Game Page.
- ##### Where you playting The Quiz Game.
+ ##### Where you playing The Quiz Game ( tap or click ).
    * Green highlight stands for Correct Answer
    * Red highlight stands for Wrong Answer
 
