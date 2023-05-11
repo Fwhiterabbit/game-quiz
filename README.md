@@ -13,6 +13,7 @@
  ##### Where you playing The Quiz Game ( tap or click ).
    * Green highlight stands for Correct Answer
    * Red highlight stands for Wrong Answer
+   * When certain your answer click " Next Question " to submit your answer
 
  ![quiz3](https://github.com/Fwhiterabbit/game-quiz/assets/122694703/1d7cf819-5a4a-40cd-bafb-07862bc61430)
  
